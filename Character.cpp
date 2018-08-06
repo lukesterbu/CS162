@@ -6,6 +6,8 @@
 
 #include "Character.hpp"
 
+using std::string;
+
 Character::Character()
 {
     atkDie = 0;
