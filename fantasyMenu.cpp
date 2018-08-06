@@ -62,6 +62,12 @@ void fantasyMenu()
             }
         }
         
+        while (characters[0]->.getStrength() > 0
+        && characters[1]->getStrength() > 0)
+        {
+            // run rounds
+        }
+        
         cout << "Choose from the following:" << endl;
         cout << "1. Play again" << endl;
         cout << "2. Exit the game" << endl;
