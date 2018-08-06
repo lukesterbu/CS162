@@ -37,6 +37,11 @@ int Character::getArmor()
     return armor;
 }
 
+void Character::setStrength(int strength)
+{
+    (*this).strength = strength;
+}
+
 int Character::getStrength()
 {
     return strength;
