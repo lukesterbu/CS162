@@ -81,7 +81,7 @@ void fantasyMenu()
             characters[1]->setStrength(characters[1]->getStrength() 
             + characters[1]->getArmor() + defense - attack);
             cout << "Updated Defender Strength: " 
-            << characters[1]->getStrength() << endl;
+            << characters[1]->getStrength() << endl << endl;
             
             // Switch attacker with defender and vice versa
             attack = characters[1]->attack();
@@ -98,7 +98,7 @@ void fantasyMenu()
             characters[0]->setStrength(characters[0]->getStrength() 
             + characters[0]->getArmor() + defense - attack);
             cout << "Updated Defender Strength: " 
-            << characters[0]->getStrength() << endl;
+            << characters[0]->getStrength() << endl << endl;
             
             rounds++; // increment rounds
         }
