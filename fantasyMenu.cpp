@@ -80,6 +80,8 @@ void fantasyMenu()
             // Calculates updated strength
             characters[1]->setStrength(characters[1]->getStrength() 
             + characters[1]->getArmor() + defense - attack);
+            // *****Shouldn't be adding defense and armor to strength******
+            
             cout << "Updated Defender Strength: " 
             << characters[1]->getStrength() << endl << endl;
             
