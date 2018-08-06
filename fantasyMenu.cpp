@@ -23,7 +23,7 @@ void fantasyMenu()
 {
     int numPlayers = 2;
     int choice = 0;
-    vector<Character*> characterArray;
+    vector<Character*> characters;
     
     for (int i = 0; i < numPlayers; i++) // iterate twice for 2 players
     {
@@ -38,23 +38,23 @@ void fantasyMenu()
         
         if (choice == 1) // Create Vampire
         {
-            characterArray.push_back(new Vampire());
+            characters.push_back(new Vampire());
         }
         else if (choice == 2) // Create Barbarian
         {
-            characterArray.push_back(new Barbarian());
+            characters.push_back(new Barbarian());
         }
         else if (choice == 3) // Create Blue Men
         {
-            characterArray.push_back(new BlueMen());
+            characters.push_back(new BlueMen());
         }
         else if (choice == 4) // Create Medusa
         {
-            characterArray.push_back(new Medusa());
+            characters.push_back(new Medusa());
         }
         else if (choice == 5) // Create Harry Potter
         {
-            characterArray.push_back(new HarryPotter());
+            characters.push_back(new HarryPotter());
         }
     }
 }
