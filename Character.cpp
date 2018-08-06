@@ -6,6 +6,10 @@
 
 #include "Character.hpp"
 
+#include <iostream>
+
+using std::cout;
+using std::endl;
 using std::string;
 
 Character::Character()
@@ -28,8 +32,10 @@ int Character::attack()
 int Character::defense()
 {}
 
-void Character::printStats()
-{}
+int Character::getStrength()
+{
+    return strength;
+}
 
 string Character::getType()
 {
