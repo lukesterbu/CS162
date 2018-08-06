@@ -1,7 +1,7 @@
 /**********************************************************************
 ** Author:      Luke Burris
 ** Date:        8/6/2018
-** Description: Character declaration for fantasy game
+** Description: Character class declaration for fantasy game
 **********************************************************************/
 
 #ifndef CHARACTER_HPP
