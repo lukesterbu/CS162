@@ -12,6 +12,8 @@
 class Medusa : public Character
 {
     public:
+        Medusa();
+        ~Medusa();
         int attack();
         int defense();
 };
