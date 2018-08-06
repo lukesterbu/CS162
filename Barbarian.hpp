@@ -12,6 +12,8 @@
 class Barbarian : public Character
 {
     public:
+        Barbarian();
+        ~Barbarian();
         int attack();
         int defense();
 };
