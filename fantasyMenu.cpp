@@ -66,6 +66,38 @@ void fantasyMenu()
         while (characters[0]->getStrength() > 0
         && characters[1]->getStrength() > 0)
         {
+            int attack = characters[0]->attack();
+            int defense = characters[1]->defense();
+            
+            cout << "ROUND " << rounds << endl << endl;
+            cout << "Attacker Type: " << characters[0]->getType() << endl;
+            cout << "Defender Type: " << characters[1]->getType() << endl;
+            cout << "Defender Armor: " << characters[1]->getArmor() << endl;
+            cout << "Defender Strength: " << characters[1]->getStrength()
+            << endl;
+            cout << "Attacker Dice Roll: " << attack << endl;
+            cout << "Defender Dice Roll: " << defense << endl;
+            characters[1]->setStrength(characters[1]->getStrength() 
+            + characters[1]->getArmor() - attack);
+            cout << "Updated Defender Strength: " 
+            << characters[1]->getStrength() << endl;
+            
+            // Switch attacker with defender and vice versa
+            attack = characters[1]->attack();
+            defense = characters[0]->defense();
+            
+            cout << "Attacker Type: " << characters[1]->getType() << endl;
+            cout << "Defender Type: " << characters[0]->getType() << endl;
+            cout << "Defender Armor: " << characters[0]->getArmor() << endl;
+            cout << "Defender Strength: " << characters[0]->getStrength()
+            << endl;
+            cout << "Attacker Dice Roll: " << attack << endl;
+            cout << "Defender Dice Roll: " << defense << endl;
+            characters[0]->setStrength(characters[0]->getStrength() 
+            + characters[0]->getArmor() - attack);
+            cout << "Updated Defender Strength: " 
+            << characters[0]->getStrength() << endl;
+            
             rounds++; // increment rounds
         }
         
