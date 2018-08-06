@@ -26,8 +26,3 @@ int Medusa::attack()
 {
     
 }
-
-int Medusa::defense()
-{
-    
-}
