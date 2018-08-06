@@ -14,6 +14,7 @@ Barbarian::Barbarian()
     defNum = 6;
     armor = 0;
     strength = 12;
+    type = "Barbarian";
 }
 
 Barbarian::~Barbarian()
