@@ -27,10 +27,24 @@ Character::~Character()
 {}
 
 int Character::attack()
-{}
+{
+    int attack = 0;
+    for (int i = 0; i < atkDie; i++)
+    {
+        attack += rand() % (atkNum - 1 + 1) + 1;
+    }
+    return attack;
+}
 
 int Character::defense()
-{}
+{
+    int defense = 0;
+    for (int i = 0; i < defDie; i++)
+    {
+        defense += rand() % (defNum - 1 + 1) + 1;
+    }
+    return defense;
+}
 
 int Character::getArmor()
 {
