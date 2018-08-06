@@ -14,6 +14,7 @@ Medusa::Medusa()
     defNum = 6;
     armor = 3;
     strength = 8;
+    type = "Medusa";
 }
 
 Medusa::~Medusa()
