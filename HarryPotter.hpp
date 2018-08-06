@@ -14,6 +14,8 @@ class HarryPotter : public Character
     private:
         int lives; // only Harry needs this because of hogwarts ability
     public:
+        HarryPotter();
+        ~HarryPotter();
         int attack();
         int defense();
 };
