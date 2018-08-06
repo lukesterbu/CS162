@@ -9,7 +9,7 @@
 
 #include "Character.hpp"
 
-class Vampire
+class Vampire : public Character
 {
     public:
         int attack();
