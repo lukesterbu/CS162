@@ -24,6 +24,7 @@ class Character
         ~Character();
         virtual int attack();
         virtual int defense();
+        int getArmor();
         int getStrength();
         std::string getType(); // returns type
 };
