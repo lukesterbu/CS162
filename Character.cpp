@@ -32,6 +32,11 @@ int Character::attack()
 int Character::defense()
 {}
 
+int Character::getArmor()
+{
+    return armor;
+}
+
 int Character::getStrength()
 {
     return strength;
