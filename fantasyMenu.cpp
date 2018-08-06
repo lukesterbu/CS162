@@ -77,8 +77,9 @@ void fantasyMenu()
             << endl;
             cout << "Attacker Dice Roll: " << attack << endl;
             cout << "Defender Dice Roll: " << defense << endl;
+            // Calculates updated strength
             characters[1]->setStrength(characters[1]->getStrength() 
-            + characters[1]->getArmor() - attack);
+            + characters[1]->getArmor() + defense - attack);
             cout << "Updated Defender Strength: " 
             << characters[1]->getStrength() << endl;
             
@@ -93,8 +94,9 @@ void fantasyMenu()
             << endl;
             cout << "Attacker Dice Roll: " << attack << endl;
             cout << "Defender Dice Roll: " << defense << endl;
+            // Calculates updated strength
             characters[0]->setStrength(characters[0]->getStrength() 
-            + characters[0]->getArmor() - attack);
+            + characters[0]->getArmor() + defense - attack);
             cout << "Updated Defender Strength: " 
             << characters[0]->getStrength() << endl;
             
