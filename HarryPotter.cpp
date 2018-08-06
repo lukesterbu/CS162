@@ -14,6 +14,7 @@ HarryPotter::HarryPotter()
     defNum = 6;
     armor = 0;
     strength = 10;
+    type = "Harry Potter";
     lives = 1;
 }
 
