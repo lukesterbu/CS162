@@ -65,6 +65,7 @@ void fantasyMenu()
         cout << "Choose from the following:" << endl;
         cout << "1. Play again" << endl;
         cout << "2. Exit the game" << endl;
+        cin >> choice;
         if (choice == 2)
             quit = true;
             
