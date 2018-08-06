@@ -23,11 +23,6 @@ HarryPotter::~HarryPotter()
     
 }
 
-int HarryPotter::attack()
-{
-    
-}
-
 int HarryPotter::defense()
 {
     
