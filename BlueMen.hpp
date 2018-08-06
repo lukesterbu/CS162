@@ -12,6 +12,8 @@
 class BlueMen : public Character
 {
     public:
+        BlueMen();
+        ~BlueMen();
         int attack();
         int defense();
 };
