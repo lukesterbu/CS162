@@ -7,6 +7,8 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
+#include <string>
+
 class Character
 {
     protected:
@@ -16,12 +18,14 @@ class Character
         int defNum; // how many defense die faces
         int armor; 
         int strength; // hit points
+        std::string type; // used for character name
     public:
         Character();
         ~Character();
         virtual int attack();
         virtual int defense();
         void printStats(); // printed each attack
+        std::string getType(); // returns type
 };
 
 #endif
