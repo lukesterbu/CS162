@@ -21,13 +21,3 @@ Barbarian::~Barbarian()
 {
     
 }
-
-int Barbarian::attack()
-{
-    
-}
-
-int Barbarian::defense()
-{
-    
-}
