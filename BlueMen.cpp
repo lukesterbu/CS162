@@ -14,6 +14,7 @@ BlueMen::BlueMen()
     defNum = 6;
     armor = 3;
     strength = 12;
+    type = "Blue Men";
 }
 
 BlueMen::~BlueMen()
