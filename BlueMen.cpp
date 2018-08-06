@@ -22,11 +22,6 @@ BlueMen::~BlueMen()
     
 }
 
-int BlueMen::attack()
-{
-    
-}
-
 int BlueMen::defense()
 {
     
