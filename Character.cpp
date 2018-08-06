@@ -14,6 +14,7 @@ Character::Character()
     defNum = 0;
     armor = 0;
     strength = 0;
+    type = "Character";
 }
 
 Character::~Character()
@@ -26,8 +27,9 @@ int Character::defense()
 {}
 
 void Character::printStats()
+{}
+
+string Character::getType()
 {
-    //Attacker type.
-    //Defender type, armor, strength point.
-    //The attacker's attack dice roll.
-    //The defenderb
+    return type;
+}
