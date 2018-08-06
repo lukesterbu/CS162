@@ -7,7 +7,7 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
-class CHARACTER_HPP
+class Character
 {
     protected:
         int atkDie; // how many attack dies
@@ -21,4 +21,7 @@ class CHARACTER_HPP
         ~Character();
         virtual int attack();
         virtual int defense();
-}
+        void printStats(); // printed each attack
+};
+
+#endif
