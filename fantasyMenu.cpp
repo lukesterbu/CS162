@@ -23,6 +23,7 @@ void fantasyMenu()
 {
     int numPlayers = 2;
     int choice = 0;
+    int rounds = 1;
     bool quit = false;
     
     vector<Character*> characters;
@@ -62,10 +63,10 @@ void fantasyMenu()
             }
         }
         
-        while (characters[0]->.getStrength() > 0
+        while (characters[0]->getStrength() > 0
         && characters[1]->getStrength() > 0)
         {
-            // run rounds
+            rounds++; // increment rounds
         }
         
         cout << "Choose from the following:" << endl;
