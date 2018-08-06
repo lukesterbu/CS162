@@ -22,12 +22,8 @@ Vampire::~Vampire()
     
 }
 
-int Vampire::attack()
-{
-    
-}
-
 int Vampire::defense()
 {
-    
+    int defense = rand() % (defDie - 1 + 1) + 1;
+    return defense;
 }
