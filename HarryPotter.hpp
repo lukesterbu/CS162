@@ -16,8 +16,7 @@ class HarryPotter : public Character
     public:
         HarryPotter();
         ~HarryPotter();
-        int attack();
-        int defense();
+        int defense(); // add hogwarts here?
 };
 
 #endif
