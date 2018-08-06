@@ -58,6 +58,9 @@ void Character::setStrength(int strength)
 
 int Character::getStrength()
 {
+    if (strength < 1)
+        cout << type << " died!" << endl;
+        
     return strength;
 }
 
