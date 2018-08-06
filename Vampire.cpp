@@ -14,6 +14,7 @@ Vampire::Vampire()
     defNum = 6;
     armor = 1;
     strength = 18;
+    type = "Vampire";
 }
 
 Vampire::~Vampire()
