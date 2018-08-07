@@ -30,7 +30,7 @@ Medusa::~Medusa()
 // Returns 1000 if Medusa rolled a perfect 12
 int Medusa::attack()
 {
-	int attack = 0;
+    int attack = 0;
     for (int i = 0; i < atkDie; i++)
     {
         attack += rand() % (atkNum - 1 + 1) + 1;
