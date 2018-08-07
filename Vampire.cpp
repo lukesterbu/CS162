@@ -6,6 +6,11 @@
 
 #include "Vampire.hpp"
 
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
 Vampire::Vampire()
 {
     atkDie = 1;
@@ -22,8 +27,13 @@ Vampire::~Vampire()
     
 }
 
-int Vampire::defense()
+int Vampire::charm(int attack)
 {
-    int defense = rand() % (defDie - 1 + 1) + 1;
-    return defense;
+    int charm = attack;
+    if (((rand() % 2) + 1) == 2)
+    {
+	charm = 0;
+	cout << "The Vampire used charm!" << endl;
+    }
+    return charm;
 }

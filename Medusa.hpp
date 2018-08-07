@@ -14,7 +14,7 @@ class Medusa : public Character
     public:
         Medusa();
         ~Medusa();
-        int attack(); // need to add glare
+        int glare(int);
 };
 
 #endif

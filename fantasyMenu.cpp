@@ -10,6 +10,7 @@
 #include "BlueMen.hpp"
 #include "Medusa.hpp"
 #include "HarryPotter.hpp"
+#include "inputValidation.hpp"
 
 #include <iostream>
 #include <vector>
@@ -39,7 +40,7 @@ void fantasyMenu()
             cout << "3. Blue Men" << endl;
             cout << "4. Medusa" << endl;
             cout << "5. Harry Potter" << endl;
-            cin >> choice; // will use inputValidation here
+            choice = inputValidation(5);
             
             if (choice == 1) // Create Vampire
             {
@@ -62,53 +63,85 @@ void fantasyMenu()
                 characters.push_back(new HarryPotter());
             }
         }
-        
+        // While both characters have above 0 strength 
         while (characters[0]->getStrength() > 0
         && characters[1]->getStrength() > 0)
         {
             int attack = characters[0]->attack();
+	    attack += characters[0]->glare(attack); // Medusa's Glare
+	    attack = characters[1]->charm(attack); // Vampire's Charm
             int defense = characters[1]->defense();
+	    int armor = characters[1]->getArmor();
+	    int difference;
+
+	    if ((defense + armor) >= attack)
+	        difference = 0;
+	    else
+		difference = attack - defense - armor;
             
             cout << "ROUND " << rounds << endl << endl;
             cout << "Attacker Type: " << characters[0]->getType() << endl;
             cout << "Defender Type: " << characters[1]->getType() << endl;
-            cout << "Defender Armor: " << characters[1]->getArmor() << endl;
+            cout << "Defender Armor: " << armor << endl;
             cout << "Defender Strength: " << characters[1]->getStrength()
             << endl;
             cout << "Attacker Dice Roll: " << attack << endl;
             cout << "Defender Dice Roll: " << defense << endl;
+	    cout << "Difference: " << difference << endl;
             // Calculates updated strength
             characters[1]->setStrength(characters[1]->getStrength() 
-            + characters[1]->getArmor() + defense - attack);
-            // *****Shouldn't be adding defense and armor to strength******
+	    - difference);
             
             cout << "Updated Defender Strength: " 
             << characters[1]->getStrength() << endl << endl;
+	    characters[1]->checkSpecial(); // Hogwarts and Mob
             
             // Switch attacker with defender and vice versa
             attack = characters[1]->attack();
-            defense = characters[0]->defense();
+	    attack += characters[1]->glare(attack); // Medusa's Glare
+	    attack = characters[0]->charm(attack); // Vampire's Charm
+	    defense = characters[0]->defense();
+	    armor = characters[0]->getArmor();
+	    difference = 0; // reset difference
+
+	    if ((defense + armor) >= attack)
+	        difference = 0;
+	    else 
+	        difference = attack - defense - armor;
             
             cout << "Attacker Type: " << characters[1]->getType() << endl;
             cout << "Defender Type: " << characters[0]->getType() << endl;
-            cout << "Defender Armor: " << characters[0]->getArmor() << endl;
+            cout << "Defender Armor: " << armor << endl;
             cout << "Defender Strength: " << characters[0]->getStrength()
             << endl;
             cout << "Attacker Dice Roll: " << attack << endl;
             cout << "Defender Dice Roll: " << defense << endl;
+	    cout << "Difference: " << difference << endl;
             // Calculates updated strength
             characters[0]->setStrength(characters[0]->getStrength() 
-            + characters[0]->getArmor() + defense - attack);
+	    - difference);
+
             cout << "Updated Defender Strength: " 
             << characters[0]->getStrength() << endl << endl;
-            
+	    characters[0]->checkSpecial(); // Hogwarts and Mob
+ 
             rounds++; // increment rounds
         }
-        
+        // Determine the winner 
+	if (characters[0]->getStrength() > characters[1]->getStrength())
+	    cout << "Player 1's " << characters[0]->getType() << " won!"
+	    << endl << endl;
+	else if (characters[1]->getStrength() < characters[0]->getStrength())
+	    cout << "Player 2's " << characters[1]->getType() << " won!"
+	    << endl << endl;
+	else
+	    cout << "Both characters died!" << endl << endl;
+
+	// Ask the user to continue or not
         cout << "Choose from the following:" << endl;
         cout << "1. Play again" << endl;
         cout << "2. Exit the game" << endl;
-        cin >> choice;
+        choice = inputValidation(2);
         if (choice == 2)
             quit = true;
             
