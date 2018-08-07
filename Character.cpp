@@ -36,7 +36,7 @@ int Character::attack()
     return attack;
 }
 
-int Character::defense()
+int Character::defense(int attack)
 {
     int defense = 0;
     for (int i = 0; i < defDie; i++)
