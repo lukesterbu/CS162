@@ -23,7 +23,7 @@ class Character
         Character();
         ~Character();
         virtual int attack();
-        virtual int defense();
+        virtual int defense(int);
         int getArmor();
         virtual void setStrength(int);
         int getStrength();
