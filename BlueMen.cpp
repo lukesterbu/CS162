@@ -26,18 +26,24 @@ BlueMen::~BlueMen()
 {
     
 }
+// Make sure strength is above zero and
 // Check to see if strength has been deducted by 4 and then
 // decrement defDie if so
-void BlueMen::checkSpecial()
+void BlueMen::setStrength(int strength)
 {
-    if ((strength / 4) > 2 && defDie == 3)
+    if (this->strength - strength < 0)
+	this->strength = 0;
+    else 
+	this->strength = strength;
+    
+    if ((this->strength / 4) > 2 && defDie == 3)
 	defDie = 3;
-    else if ((strength / 4) > 1 && defDie == 3)
+    else if ((this->strength / 4) > 1 && defDie == 3)
     {
 	defDie = 2;
 	cout << "The Mob was decreased to " << defDie << endl;
     }
-    else if ((strength / 4) <= 1 && defDie == 2)
+    else if ((this->strength / 4) <= 1 && defDie == 2)
     {
 	defDie = 1;
 	cout << "The Mob was decreased to " << defDie << endl;
