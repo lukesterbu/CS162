@@ -35,7 +35,7 @@ int Character::attack()
     }
     return attack;
 }
-
+// Calculates damage done
 int Character::defense(int attack)
 {
     int defense = 0;
