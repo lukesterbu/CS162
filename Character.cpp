@@ -43,6 +43,14 @@ int Character::defense(int attack)
     {
         defense += rand() % (defNum - 1 + 1) + 1;
     }
+	
+    if ((defense + armor) >= attack)
+	difference = 0;
+    else
+	difference = attack - defense - armor;
+	
+    strength -= difference;
+	
     return defense;
 }
 
