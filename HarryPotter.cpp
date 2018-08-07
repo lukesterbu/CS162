@@ -6,6 +6,11 @@
 
 #include "HarryPotter.hpp"
 
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
 HarryPotter::HarryPotter()
 {
     atkDie = 2;
@@ -23,7 +28,12 @@ HarryPotter::~HarryPotter()
     
 }
 
-int HarryPotter::defense()
+void HarryPotter::checkSpecial()
 {
-    
+    if (strength <= 0 && lives == 1)
+    {
+        strength = 20; 
+	lives = 0;
+	cout << "Harry Potter was resurrected!" << endl;
+    }
 }

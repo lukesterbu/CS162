@@ -14,7 +14,7 @@ class BlueMen : public Character
     public:
         BlueMen();
         ~BlueMen();
-        int defense(); // need to add mob
+        void checkSpecial(); // Mob here
 };
 
 #endif

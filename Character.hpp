@@ -24,6 +24,9 @@ class Character
         ~Character();
         virtual int attack();
         virtual int defense();
+	virtual void checkSpecial(); // for Hogwarts and Mob
+	virtual int glare(int); // for Glare
+	virtual int charm(int); // for Charm
         int getArmor();
         void setStrength(int);
         int getStrength();

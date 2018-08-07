@@ -6,6 +6,11 @@
 
 #include "Medusa.hpp"
 
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
 Medusa::Medusa()
 {
     atkDie = 2;
@@ -22,7 +27,14 @@ Medusa::~Medusa()
     
 }
 
-int Medusa::attack()
+// Returns 100 if Medusa rolled a perfect 12
+int Medusa::glare(int attack)
 {
-    
+    int stone = 0;
+    if (attack == 12)
+    {
+	stone = 100;
+	cout << "Medusa used glare!" << endl;
+    }
+    return stone;
 }
