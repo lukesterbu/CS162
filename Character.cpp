@@ -49,7 +49,7 @@ int Character::defense(int attack)
     else
 	difference = attack - defense - armor;
 	
-    setStrength(strength -= difference);
+    setStrength(strength - difference);
 	
     return defense;
 }
