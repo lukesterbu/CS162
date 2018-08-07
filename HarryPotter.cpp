@@ -25,11 +25,17 @@ HarryPotter::HarryPotter()
 
 HarryPotter::~HarryPotter()
 {
-    
+	
 }
 
-void HarryPotter::checkSpecial()
+// Doesn't let strength go below 0 and determines if resurrection
+void Character::setStrength(int strength)
 {
+    if (this->strength - strength < 0)
+	this->strength = 0;
+    else 
+	this->strength = strength;
+    // Resurrection
     if (strength <= 0 && lives == 1)
     {
         strength = 20; 
