@@ -49,7 +49,7 @@ int Character::defense(int attack)
     else
 	difference = attack - defense - armor;
 	
-    strength -= difference;
+    setStrength(strength -= difference);
 	
     return defense;
 }
@@ -58,7 +58,7 @@ int Character::getArmor()
 {
     return armor;
 }
-
+// Doesn't let strength go below 0
 void Character::setStrength(int strength)
 {
     if (this->strength - strength < 0)
