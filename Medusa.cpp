@@ -27,14 +27,19 @@ Medusa::~Medusa()
     
 }
 
-// Returns 100 if Medusa rolled a perfect 12
+// Returns 1000 if Medusa rolled a perfect 12
 int Medusa::attack()
 {
-    int stone = 0;
+	int attack = 0;
+    for (int i = 0; i < atkDie; i++)
+    {
+        attack += rand() % (atkNum - 1 + 1) + 1;
+    }
+	
     if (attack == 12)
     {
-	stone = 100;
-	cout << "Medusa used glare!" << endl;
+		attack = 1000; // Very high number so opponent dies
+		cout << "Medusa used glare!" << endl;
     }
-    return stone;
+    return attack;
 }
