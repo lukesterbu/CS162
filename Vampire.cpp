@@ -38,7 +38,7 @@ int Vampire::charm(int attack)
     return charm;
 }
 
-int Character::defense()
+int Vampire::defense()
 {
     int defense = 0;
     for (int i = 0; i < defDie; i++)
