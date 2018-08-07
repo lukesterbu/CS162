@@ -14,7 +14,7 @@ class Vampire : public Character
     public:
         Vampire();
         ~Vampire();
-        int defense(int);
+        int defense(int); // has charm
 };
 
 #endif
