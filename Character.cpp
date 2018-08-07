@@ -46,19 +46,6 @@ int Character::defense()
     return defense;
 }
 
-void Character::checkSpecial()
-{}
-
-int Character::glare(int attack)
-{
-    return 0;
-}
-
-int Character::charm(int attack)
-{
-    return attack;
-}
-
 int Character::getArmor()
 {
     return armor;
