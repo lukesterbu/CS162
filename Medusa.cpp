@@ -28,7 +28,7 @@ Medusa::~Medusa()
 }
 
 // Returns 100 if Medusa rolled a perfect 12
-int Medusa::glare(int attack)
+int Medusa::attack()
 {
     int stone = 0;
     if (attack == 12)
