@@ -38,8 +38,8 @@ int Medusa::attack()
 	
     if (attack == 12)
     {
-		attack = 1000; // Very high number so opponent dies
-		cout << "Medusa used glare!" << endl;
+	    attack = 1000; // Very high number so opponent dies
+	    cout << "Medusa used glare!" << endl;
     }
     return attack;
 }
