@@ -39,6 +39,7 @@ int Character::attack()
 int Character::defense(int attack)
 {
     int defense = 0;
+    int difference = 0;
     for (int i = 0; i < defDie; i++)
     {
         defense += rand() % (defNum - 1 + 1) + 1;
@@ -49,7 +50,7 @@ int Character::defense(int attack)
     else
 	difference = attack - defense - armor;
 	
-    setStrength(strength - difference);
+    setStrength(difference);
 	
     return defense;
 }
@@ -59,12 +60,12 @@ int Character::getArmor()
     return armor;
 }
 // Doesn't let strength go below 0
-void Character::setStrength(int strength)
+void Character::setStrength(int difference)
 {
-    if (this->strength - strength < 0)
-	this->strength = 0;
+    if (strength - difference < 0)
+	strength = 0;
     else 
-	this->strength = strength;
+	strength -= difference;
 }
 
 int Character::getStrength()

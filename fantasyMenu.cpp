@@ -70,7 +70,7 @@ void fantasyMenu()
             cout << "ROUND " << rounds << endl << endl;
             cout << "Attacker Type: " << characters[0]->getType() << endl;
             cout << "Defender Type: " << characters[1]->getType() << endl;
-            cout << "Defender Armor: " << characters[1]->getArmor(); << endl;
+            cout << "Defender Armor: " << characters[1]->getArmor() << endl;
             cout << "Defender Strength: " << characters[1]->getStrength()
             << endl;
 	    // Run attack and defense (attack must be run first)

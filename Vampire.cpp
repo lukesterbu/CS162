@@ -32,6 +32,7 @@ Vampire::~Vampire()
 int Vampire::defense(int attack)
 {
     int defense = 0;
+    int difference = 0;
     for (int i = 0; i < defDie; i++)
     {
         defense += rand() % (defNum - 1 + 1) + 1;
@@ -48,7 +49,7 @@ int Vampire::defense(int attack)
     else
 	difference = attack - defense - armor;
 	
-    setStrength(strength - difference);
+    setStrength(difference);
 	
     return defense;
 }
